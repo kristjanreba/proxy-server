@@ -24,4 +24,3 @@ and code formatting checks.
 Running pre-commit helps keep code clean with each commit.
 If you are in a hurry and can't make sure that the code is properly formatted,
 use `git commit --no-verify -m "..."` to skip pre-commit checks.
-
