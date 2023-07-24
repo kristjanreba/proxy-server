@@ -1,0 +1,10 @@
+.*
+!.coveragerc
+!.env
+!.pylintrc
+!.build
+.build/public
+.build/helm
+!.build/public/static/staticfiles.json
+!docker
+docker/static

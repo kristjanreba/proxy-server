@@ -1,0 +1,14 @@
+# Use the official Python base image
+FROM python:3.11
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the test server code to the container
+COPY test_server.py .
+
+# Expose the port on which the test server will run
+EXPOSE 8001
+
+# Start the test server
+CMD ["python", "test_server.py"]

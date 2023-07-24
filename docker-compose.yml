@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  proxy:
+    build: .
+    ports:
+      - "${HTTP_PORT}:${HTTP_PORT}"
+    environment:
+      - TEST_SERVER_PORT=${TEST_SERVER_PORT}
+    depends_on:
+      - test_server
+    env_file:
+      - .env
+
+  test_server:
+    build:
+      context: .
+      dockerfile: DockerfileTestServer
+    ports:
+      - "${TEST_SERVER_PORT}:${TEST_SERVER_PORT}"
+    env_file:
+      - .env
