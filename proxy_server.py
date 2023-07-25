@@ -13,7 +13,7 @@ from aiohttp import web
 test_server_port = int(os.environ.get("TEST_SERVER_PORT", 8001))
 proxy_port = int(os.environ.get("HTTP_PORT", 8081))
 
-SECRET_KEY = b"a9ddbcaba8c0ac1a0a812dc0c2f08514b23f2db0a68343cb8199ebb38a6d91e4"  # noqa
+SECRET_KEY = b"a9ddbcaba8c0ac1a0a812dc0c2f08514b23f2db0a68343cb8199ebb38a6d91e4ebfb378e22ad39c2d01d0b4ec9c34aa91056862ddace3fbbd6852ee60c36acbf"  # noqa
 UPSTREAM_URL = (
     f"http://localhost:{test_server_port}"  # Replace this with your upstream endpoint
 )
