@@ -5,6 +5,8 @@ services:
     build: .
     ports:
       - "${HTTP_PORT}:${HTTP_PORT}"
+    volumes:
+      - ./proxy_server.py:/app/proxy_server.py
     depends_on:
       - test_server
     env_file:
