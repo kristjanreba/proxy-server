@@ -15,7 +15,7 @@ proxy_port = int(os.environ.get("HTTP_PORT", 8081))
 
 SECRET_KEY = b"a9ddbcaba8c0ac1a0a812dc0c2f08514b23f2db0a68343cb8199ebb38a6d91e4ebfb378e22ad39c2d01d0b4ec9c34aa91056862ddace3fbbd6852ee60c36acbf"  # noqa
 UPSTREAM_URL = (
-    f"http://localhost:{test_server_port}"  # Replace this with your upstream endpoint
+    f"http://test_server:{test_server_port}"  # Replace this with your upstream endpoint
 )
 
 start_time = time.time()
@@ -82,7 +82,7 @@ def run_proxy_server():
     app.router.add_route("POST", "/", proxy_handler)
     app.router.add_route("GET", "/status", status_handler)
 
-    web.run_app(app, host="localhost", port=proxy_port)
+    web.run_app(app, host="0.0.0.0", port=proxy_port)
 
 
 if __name__ == "__main__":

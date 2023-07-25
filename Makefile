@@ -15,5 +15,5 @@ run:
 
 test:
 	docker-compose up -d
-	docker-compose exec proxy pytest test_proxy_server.py
+	docker-compose exec proxy pytest tests.py
 	docker-compose down
