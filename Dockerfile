@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose the port on which the HTTP server will run
-EXPOSE 8080
+EXPOSE 8081
 
 # Start the server
 CMD ["python", "proxy_server.py"]

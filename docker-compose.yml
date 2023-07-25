@@ -5,8 +5,6 @@ services:
     build: .
     ports:
       - "${HTTP_PORT}:${HTTP_PORT}"
-    environment:
-      - TEST_SERVER_PORT=${TEST_SERVER_PORT}
     depends_on:
       - test_server
     env_file:

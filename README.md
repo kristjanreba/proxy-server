@@ -1,13 +1,21 @@
-# Python Task
+# Python HTTP Proxy Server
+
+This is a simple Python HTTP proxy server that appends a JSON Web Token (JWT) to POST requests. The JWT contains specific claims like iat (Timestamp of the request), jti (Cryptographic nonce), and payload (A JSON payload containing user information and date).
+
+The proxy server is built to sign the JWT using the HS512 algorithm and a secret key defined in the script. The signed JWT is then added as the x-my-jwt header to the upstream POST request.
+
+The upstream post endpoint can be any dummy endpoint for testing purposes.
+
 
 ### Setup
 ```shell
+make build
 make up
 ```
 
 ### Access
 ```
-URL: localhost:8080/status
+URL: localhost:8081/status
 ```
 
 ### Development setup

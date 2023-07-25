@@ -1,5 +1,5 @@
 # Variables
-HTTP_PORT ?= 8080
+HTTP_PORT ?= 8081
 TEST_SERVER_PORT ?= 8001
 DOCKER_IMAGE_NAME ?= python-http-proxy
 DOCKER_TEST_SERVER_IMAGE_NAME ?= python-test-server
